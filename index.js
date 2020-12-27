@@ -1,4 +1,4 @@
-var buttonColours=["red","blue","greeen","yellow"];
+var buttonColours=["red","blue","green","yellow"];
 var gamePattern=[];
 var userClickedPattern=[];
 var flag=0;
@@ -29,6 +29,7 @@ function nextSequence()
   $("#level-title").text("level"+level);
   var randomNumber=Math.floor(Math.random()*4);
   var randomChosenColour=buttonColours[randomNumber];
+  // console.log(randomChosenColour);
   gamePattern.push(randomChosenColour);
   $("#"+randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
